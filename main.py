@@ -47,6 +47,11 @@ def main():
                 pygame.quit()
                 sys.exit()
         
+            for shot in shots:
+                if shot.colision(asteroid):
+                    asteroid.kill()
+                    asteroid.split()
+        
         screen.fill("black")
         
         for object in drawable:
